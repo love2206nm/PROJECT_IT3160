@@ -1,0 +1,84 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Environment Variables & Secrets
+.env.local
+.env.*.local
+*.secret.yaml
+
+# IDE & Editor settings
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Jupyter Notebook Checkpoints
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# Model Weights & Large Binary Artefacts (Allow structure, ignore large outputs if needed)
+*.pt
+*.pth
+*.onnx
+*.bin
+
+# Testing & Coverage
+.coverage
+.coverage.*
+.pytest_cache/
+htmlcov/
+
+# Logs
+*.log
+logs/
+
+# Data files & Datasets (Raw, Processed, Models)
+data/*.csv
+data/raw_data/*.csv
+data/clean_data/*
+!data/clean_data/.gitkeep
+!data/raw_data/.gitkeep
+data_cleaned_scaled/
+*.csv
+*.tsv
+*.parquet
+*.feather
+*.h5
+*.pkl
