@@ -20,10 +20,7 @@ try:
 except ImportError:
     BM25Okapi = None
 
-try:
-    from sentence_transformers import SentenceTransformer
-except ImportError:
-    SentenceTransformer = None
+SentenceTransformer = None
 
 from source.infrastructure.config import settings
 from source.infrastructure.logger import get_logger
@@ -68,15 +65,17 @@ class HybridIndexer:
         self.is_indexed: bool = False
 
     def _get_embedder(self) -> Any:
-        """Lazy load SentenceTransformer embedder."""
+        """Lazy load SentenceTransformer embedder with single-thread CPU memory optimization."""
         if self.embedder is None:
-            if SentenceTransformer is None:
-                raise ImportError(
-                    "sentence-transformers is required for dense vector search. "
-                    "Install with 'pip install sentence-transformers'."
-                )
-            logger.info("Loading SentenceTransformer model '%s'...", self.embedding_model_name)
-            self.embedder = SentenceTransformer(self.embedding_model_name)
+            try:
+                import torch
+                torch.set_num_threads(1)
+                from sentence_transformers import SentenceTransformer
+                logger.info("Loading SentenceTransformer model '%s' on demand...", self.embedding_model_name)
+                self.embedder = SentenceTransformer(self.embedding_model_name)
+            except Exception as e:
+                logger.warning("Could not initialize SentenceTransformer (%s). Dense vector search will fallback.", e)
+                self.embedder = None
         return self.embedder
 
     def build_index(self, chunks: List[Dict[str, Any]]) -> None:
@@ -213,6 +212,9 @@ class HybridIndexer:
             raise RuntimeError("FAISS index not initialized.")
 
         embedder = self._get_embedder()
+        if embedder is None:
+            return {}
+
         query_vec = embedder.encode(
             [query], convert_to_numpy=True, normalize_embeddings=True
         ).astype(np.float32)

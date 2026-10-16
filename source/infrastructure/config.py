@@ -66,7 +66,7 @@ class Settings(BaseSettings):
     RAG_TOP_K: int = 5
     RAG_EMBEDDING_MODEL: str = "sentence-transformers/all-MiniLM-L6-v2"
     RAG_RERANKER_MODEL: str = "cross-encoder/ms-marco-MiniLM-L-6-v2"
-    RAG_USE_RERANKER: bool = True
+    RAG_USE_RERANKER: bool = False
     MAX_CRITIC_ITERATIONS: int = 2
 
     # Logging Parameters

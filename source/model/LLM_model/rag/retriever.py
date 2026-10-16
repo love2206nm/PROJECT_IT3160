@@ -10,10 +10,7 @@ import time
 from typing import List, Dict, Any, Optional, Set, Tuple
 from pathlib import Path
 
-try:
-    from sentence_transformers import CrossEncoder
-except ImportError:
-    CrossEncoder = None
+CrossEncoder = None
 
 from source.domain.interfaces.rag import IEvidenceRetriever
 from source.model.LLM_model.rag.corpus_manager import CorpusManager
@@ -59,10 +56,11 @@ class HierarchicalEvidenceRetriever(IEvidenceRetriever):
                 self.indexer.build_index(self.corpus_manager.all_chunks)
 
     def _get_reranker(self) -> Optional[Any]:
-        """Lazy load CrossEncoder reranker model."""
-        if self.use_reranker and self.reranker is None and CrossEncoder is not None:
+        """Lazy load CrossEncoder reranker model on demand."""
+        if self.use_reranker and self.reranker is None:
             try:
-                logger.info("Initializing CrossEncoder reranker '%s'...", self.reranker_model_name)
+                from sentence_transformers import CrossEncoder
+                logger.info("Initializing CrossEncoder reranker '%s' on demand...", self.reranker_model_name)
                 self.reranker = CrossEncoder(self.reranker_model_name)
             except Exception as e:
                 logger.warning("Failed to initialize CrossEncoder (%s). Falling back to RRF.", e)

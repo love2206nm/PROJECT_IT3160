@@ -12,6 +12,8 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
     HOST=0.0.0.0 \
     APP_ENV=production \
     DEBUG=false \
+    OMP_NUM_THREADS=1 \
+    MKL_NUM_THREADS=1 \
     DEBIAN_FRONTEND=noninteractive
 
 # Install minimal OS dependencies for numerical C-extensions & health checks
