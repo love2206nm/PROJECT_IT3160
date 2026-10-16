@@ -101,3 +101,8 @@ data_cleaned_scaled/
 !data/raw_data/job_titles.csv
 !models/*.joblib
 !models/faiss_index/**
+
+# --- User Personal CVs & Uploaded Documents ---
+/*.pdf
+/*.docx
+!tests/sample_cvs/**

@@ -22,10 +22,9 @@ BASE_URL = os.getenv("API_URL", "http://127.0.0.1:8000")
 STREAM_ENDPOINT = f"{BASE_URL}/api/v1/copilot/chat/stream"
 HEALTH_ENDPOINT = f"{BASE_URL}/health"
 
-CV_PATH = Path("CV Nguyen Hai Nam.pdf")
+CV_PATH = Path("tests/sample_cvs/06_pdf_software_engineer_linear.pdf")
 if not CV_PATH.exists():
-    # Fallback to sample CV if root CV is missing
-    fallback_cv = Path("tests/sample_cvs/06_pdf_software_engineer_linear.pdf")
+    fallback_cv = Path("CV Nguyen Hai Nam.pdf")
     if fallback_cv.exists():
         CV_PATH = fallback_cv
 
