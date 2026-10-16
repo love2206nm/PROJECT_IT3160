@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Career Copilot — Trợ Lý Cố Vấn Nghề Nghiệp AI</title>
+    <meta name="description" content="Chatbot thông minh tư vấn nghề nghiệp, phân tích nguy cơ tự động hóa từ CSDL O*NET, đề xuất hướng chuyển dịch an toàn và lộ trình 30-60-90 ngày.">
+    <meta name="theme-color" content="#090d16">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="chatbot-app-body">
+
+    <!-- Ambient Cyber Glows -->
+    <div class="ambient-glow glow-1"></div>
+    <div class="ambient-glow glow-2"></div>
+
+    <!-- Main Chat Window Wrapper -->
+    <div class="chat-app-container">
+        
+        <!-- Header -->
+        <header class="chat-app-header">
+            <div class="header-brand">
+                <div class="brand-avatar">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z"/>
+                        <rect x="4" y="8" width="16" height="12" rx="2"/>
+                    </svg>
+                </div>
+                <div class="brand-meta">
+                    <h1 class="brand-name">AI Career Copilot</h1>
+                    <span class="status-online"><span class="pulse-dot green"></span> Trực tuyến &bull; CSDL O*NET 2024</span>
+                </div>
+            </div>
+
+            <div class="header-actions">
+                <button id="btn-new-chat" class="btn-chat-action" title="Bắt đầu cuộc trò chuyện mới">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/>
+                    </svg>
+                    <span>Cuộc trò chuyện mới</span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Chat Messages History Area -->
+        <main id="chat-messages" class="chat-messages-area">
+            <!-- Initial Greeting from Assistant -->
+            <div class="chat-bubble chat-assistant">
+                <div class="chat-avatar">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z"/>
+                        <rect x="4" y="8" width="16" height="12" rx="2"/>
+                    </svg>
+                </div>
+                <div class="chat-content">
+                    <p>Xin chào! Tôi là <strong>AI Career Copilot</strong> — Trợ lý Cố vấn Nghề nghiệp thông minh được tích hợp Cơ sở dữ liệu O*NET và mô hình dự báo AI.</p>
+                    <p>Bạn có thể:</p>
+                    <ul>
+                        <li>💬 <strong>Trò chuyện tự do</strong>: Đặt câu hỏi về thị trường lao động, cách thích ứng với AI hoặc xu hướng chuyển ngành.</li>
+                        <li>📎 <strong>Đính kèm file CV</strong>: Nhấn vào biểu tượng chiếc ghim bên dưới (hỗ trợ PDF/DOCX) để tôi bóc tách hồ sơ, đánh giá nguy cơ tự động hóa từ CSDL và lập lộ trình chuyển đổi 30-60-90 ngày chi tiết!</li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+
+        <!-- Bottom Chat Input Dock -->
+        <footer class="chat-input-dock">
+            <div class="input-dock-container">
+                <!-- Attachment File Preview Chip (hidden by default) -->
+                <div id="attachment-preview" class="attachment-preview-chip hidden">
+                    <div class="preview-file-info">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                            <polyline points="14 2 14 8 20 8"/>
+                        </svg>
+                        <span id="attached-filename" class="attached-filename">filename.pdf</span>
+                    </div>
+                    <button id="btn-remove-attachment" class="btn-remove-chip" title="Hủy đính kèm file">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="18" y1="6" x2="6" y2="18"/>
+                            <line x1="6" y1="6" x2="18" y2="18"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Input Controls Row -->
+                <div class="input-controls-row">
+                    <!-- Hidden File Input -->
+                    <input type="file" id="file-attachment" accept=".pdf,.docx,.txt" style="display:none">
+
+                    <!-- Attach Button -->
+                    <button id="btn-attach" class="btn-dock-icon" title="Đính kèm file CV (.pdf, .docx, .txt)">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"/>
+                        </svg>
+                    </button>
+
+                    <!-- Textarea -->
+                    <textarea 
+                        id="chat-input-text" 
+                        class="chat-textarea" 
+                        placeholder="Nhập câu hỏi hoặc đính kèm CV để phân tích... (Nhấn Enter để gửi)" 
+                        rows="1"
+                    ></textarea>
+
+                    <!-- Send Button -->
+                    <button id="btn-send" class="btn-dock-send" title="Gửi tin nhắn">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="22" y1="2" x2="11" y2="13"/>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Application Script Module -->
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,244 @@
+{
+  "session_id": "test_e2e_1792125101_f06a16",
+  "timestamp": 1792125397.0588617,
+  "results": [
+    {
+      "id": "Q1",
+      "name": "Out-of-Domain Chit-chat",
+      "type": "chat",
+      "message": "Hôm nay thời tiết Hà Nội thế nào?",
+      "status": "PASS",
+      "error": null,
+      "metrics": {
+        "ttft_ms": 7584.4,
+        "total_latency_ms": 30512.0,
+        "reported_latency_ms": 27575.0,
+        "reported_tier": "DIRECT_CHAT",
+        "char_count": 290,
+        "token_count": 61,
+        "throughput_tokens_sec": 2.0
+      },
+      "pattern_checks": {
+        "has_badge": true,
+        "helpful_or_polite": true
+      },
+      "response_preview": "Hôm nay thời tiết Hà Nội khá dễ chịu với nhiệt độ dao động từ **24°C đến 31°C**. Trời có thể có mưa nhẹ hoặc nắng nhẹ, độ ẩm khoảng **70-80%**. Bạn nên mang theo ô hoặc áo mưa để phòng trường hợp mưa bất chợt nhé! 😊  --- ⏱️ **Thời gian phản hồi:** 27",
+      "full_response": "Hôm nay thời tiết Hà Nội khá dễ chịu với nhiệt độ dao động từ **24°C đến 31°C**. Trời có thể có mưa nhẹ hoặc nắng nhẹ, độ ẩm khoảng **70-80%**. Bạn nên mang theo ô hoặc áo mưa để phòng trường hợp mưa bất chợt nhé! 😊\n\n---\n⏱️ **Thời gian phản hồi:** 27575.0ms | 🧭 **Luồng xử lý:** DIRECT_CHAT"
+    },
+    {
+      "id": "Q2",
+      "name": "System Identity & Guidance",
+      "type": "chat",
+      "message": "Bạn là ai và có thể giúp gì cho tôi?",
+      "status": "PASS",
+      "error": null,
+      "metrics": {
+        "ttft_ms": 2027.1,
+        "total_latency_ms": 2028.0,
+        "reported_latency_ms": 0.4,
+        "reported_tier": "DIRECT_CHAT",
+        "char_count": 724,
+        "token_count": 151,
+        "throughput_tokens_sec": 74.5
+      },
+      "pattern_checks": {
+        "has_badge": true,
+        "identity_clarity": true,
+        "key_features": true
+      },
+      "response_preview": "Tôi là **AI Career Copilot**, trợ lý định hướng sự nghiệp thời đại AI. Tôi giúp bạn:  - 📊 **Đo lường nguy cơ tự động hóa**: Dựa trên CSDL O*NET của Bộ Lao động Hoa Kỳ và mô hình Machine Learning. - 🔄 **Khuyến nghị Top 2-3 ngành chuyển dịch an toàn**:",
+      "full_response": "Tôi là **AI Career Copilot**, trợ lý định hướng sự nghiệp thời đại AI. Tôi giúp bạn:\n\n- 📊 **Đo lường nguy cơ tự động hóa**: Dựa trên CSDL O*NET của Bộ Lao động Hoa Kỳ và mô hình Machine Learning.\n- 🔄 **Khuyến nghị Top 2-3 ngành chuyển dịch an toàn**: Đánh giá trade-off về độ tương đồng kỹ năng, mức giảm đe dọa AI và lợi thế thu nhập.\n- 🛡️ **Đối sách kỹ năng (Skill Countermeasures)**: Tận dụng thế mạnh sẵn có để học nhanh công cụ mới qua bài lab thực chiến.\n- 🚀 **Lập lộ trình 30-60-90 ngày**: Cho cả người đi làm chuyển ngành và sinh viên xây dựng portfolio từ con số 0.\n\n👉 Hãy nhấn **nút chiếc ghim (📎)** ở thanh chat để gửi CV và bắt đầu ngay nhé!\n\n---\n⏱️ **Thời gian phản hồi:** 0.4ms | 🧭 **Luồng xử lý:** DIRECT_CHAT"
+    },
+    {
+      "id": "Q3",
+      "name": "General Labor Market / AI Risk Trend",
+      "type": "chat",
+      "message": "Xu hướng tự động hóa của ngành công nghệ thông tin trong 3 năm tới thế nào?",
+      "status": "PASS",
+      "error": null,
+      "metrics": {
+        "ttft_ms": 10192.8,
+        "total_latency_ms": 26744.7,
+        "reported_latency_ms": 24703.5,
+        "reported_tier": "KNOWLEDGE_RAG",
+        "char_count": 1452,
+        "token_count": 289,
+        "throughput_tokens_sec": 10.8
+      },
+      "pattern_checks": {
+        "has_badge": true,
+        "grounding_content": true
+      },
+      "response_preview": "Theo dữ liệu cập nhật từ O*NET 2024 và các nghiên cứu thị trường lao động, xu hướng tự động hóa trong ngành CNTT 3 năm tới sẽ có những đặc điểm nổi bật sau:  **1. Tăng tốc AI trong phát triển phần mềm**   - 45-60% công việc coding cơ bản sẽ được tự đ",
+      "full_response": "Theo dữ liệu cập nhật từ O*NET 2024 và các nghiên cứu thị trường lao động, xu hướng tự động hóa trong ngành CNTT 3 năm tới sẽ có những đặc điểm nổi bật sau:\n\n**1. Tăng tốc AI trong phát triển phần mềm**  \n- 45-60% công việc coding cơ bản sẽ được tự động hóa bằng AI (theo chỉ số AUTOMATION_LEVEL của O*NET)\n- Các công cụ như GitHub Copilot dự kiến nâng cao năng suất dev lên 55%\n\n**2. Chuyển dịch vai trò nhân sự**  \n- 30% vị trí IT support cấp thấp có nguy cơ thay thế bởi chatbot và hệ thống tự sửa lỗi (O*NET SOC 15-1232)\n- Nhu cầu chuyên gia AI/ML tăng 35% so với 2024\n\n**3. Lĩnh vực trọng điểm tự động hóa**  \n- **Testing/QA**: 70% test case thực thi tự động\n- **CloudOps**: Tự động hóa triển khai infrastructure qua IaC (Terraform/Ansible)\n- **Data Engineering**: AutoML chiếm 40% workflow xử lý dữ liệu\n\n**4. Kỹ năng phòng thủ AI** (theo O*NET Defense Skills Framework)  \n- Các role ít bị đe dọa nhất yêu cầu:  \n  ✓ Thiết kế hệ thống AI (AUTOMATION_IMMUNITY >80)  \n  ✓ Đạo đức AI và quản trị thuật toán  \n  ✓ Tích hợp hệ thống phức tạp  \n\n**Khuyến nghị nghề nghiệp**:  \n• Cập nhật kỹ năng làm chủ AI tools thay vì chống lại tự động hóa  \n• Chuyên môn hóa vào các mảng có AUTOMATION_IMMUNITY cao (kiến trúc phần mềm, bảo mật hệ thống)  \n\n*Bạn muốn đánh giá mức độ ảnh hưởng cụ thể với vị trí hiện tại? Hãy tải CV lên (📎) để nhận báo cáo rủi ro tự động hóa cá nhân hóa.*\n\n---\n⏱️ **Thời gian phản hồi:** 24703.5ms | 🧭 **Luồng xử lý:** KNOWLEDGE_RAG"
+    },
+    {
+      "id": "Q4",
+      "name": "Certification & Tool Trade-off",
+      "type": "chat",
+      "message": "Nên thi chứng chỉ AWS Solutions Architect hay CKA trước để làm Data Engineer?",
+      "status": "PASS",
+      "error": null,
+      "metrics": {
+        "ttft_ms": 11690.7,
+        "total_latency_ms": 25998.4,
+        "reported_latency_ms": 23955.6,
+        "reported_tier": "KNOWLEDGE_RAG",
+        "char_count": 1517,
+        "token_count": 286,
+        "throughput_tokens_sec": 11.0
+      },
+      "pattern_checks": {
+        "has_badge": true,
+        "domain_content": true
+      },
+      "response_preview": "Dựa trên phân tích từ cơ sở dữ liệu O*NET và yêu cầu kỹ năng của nghề Data Engineer, đây là khuyến nghị chi tiết:  **1. Ưu tiên chứng chỉ AWS Solutions Architect (AWS SAA) trước nếu:** - **Liên quan trực tiếp đến Data Engineering**: 87% vị trí Data E",
+      "full_response": "Dựa trên phân tích từ cơ sở dữ liệu O*NET và yêu cầu kỹ năng của nghề Data Engineer, đây là khuyến nghị chi tiết:\n\n**1. Ưu tiên chứng chỉ AWS Solutions Architect (AWS SAA) trước nếu:**\n- **Liên quan trực tiếp đến Data Engineering**: 87% vị trí Data Engineer yêu cầu kiến thức điện toán đám mây (O*NET IT-Cloud Task Inventory)\n- **Kỹ năng trọng tâm**: AWS cung cấp dịch vụ lõi cho Data Engineer (S3, Glue, Redshift, Kinesis) được sử dụng trong 73% doanh nghiệp (O*NET Cloud Adoption Survey 2024)\n- **Lộ trình học**: AWS SAA bao phủ 60% kiến thức nền tảng cần cho Data Engineer so với 35% của CKA (O*NET Certification Crosswalk)\n\n**2. Chứng chỉ CKA (Certified Kubernetes Administrator) nên học sau khi:**\n- Đã có nền tảng cloud vững\n- Làm việc với hệ thống container hóa (chỉ 29% Data Engineer thường xuyên dùng Kubernetes - O*NET Container Usage Report)\n- Muốn chuyên sâu vào xử lý distributed systems\n\n**3. Lộ trình tối ưu theo O*NET:**\n1. AWS Cloud Practitioner (nếu mới bắt đầu)\n2. AWS Solutions Architect Associate\n3. AWS Data Analytics Specialty\n4. CKA (nếu cần thiết cho công việc cụ thể)\n\n**Thống kê hỗ trợ:**\n- Mức lương trung bình Data Engineer có AWS cert cao hơn 22% so với người có CKA (O*NET Salary Comparator)\n- 41% nhà tuyển dụng ưu tiên ứng viên có chứng chỉ cloud (O*NET Hiring Trends 2024)\n\nBạn có muốn phân tích sâu hơn về lộ trình cá nhân? Có thể tải CV lên (📎) để nhận bản đồ kỹ năng tùy chỉnh theo kinh nghiệm hiện tại.\n\n---\n⏱️ **Thời gian phản hồi:** 23955.6ms | 🧭 **Luồng xử lý:** KNOWLEDGE_RAG"
+    },
+    {
+      "id": "Q5",
+      "name": "Core Resume Ingestion & Deep Analysis",
+      "type": "upload",
+      "message": "Hãy phân tích chi tiết hồ sơ CV của tôi.",
+      "status": "FAIL",
+      "error": null,
+      "metrics": {
+        "ttft_ms": 2631.4,
+        "total_latency_ms": 2633.0,
+        "reported_latency_ms": 551.8,
+        "reported_tier": "WORKFLOW (Phân tích CV Chuyên sâu & Đối sách Kỹ năng)",
+        "char_count": 3307,
+        "token_count": 613,
+        "throughput_tokens_sec": 232.8
+      },
+      "pattern_checks": {
+        "has_badge": true,
+        "has_candidate_name": false,
+        "fresher_mode": true,
+        "threat_score_17": true,
+        "sub_scores": true,
+        "safe_pivots": true,
+        "skill_countermeasures": true,
+        "roadmap_30_60_90": true
+      },
+      "response_preview": "### 📋 CHẾ ĐỘ ĐỊNH HƯỚNG KHỞI ĐẦU CHO SINH VIÊN / FRESHER  **Họ và tên**: NGUYEN HAI NAM   **Vị trí chuyên môn**: Quant Researcher & Data Engineer *(Mã O\\*NET: 15-1221 — Computer and Information Research Scientists)*   **Số năm kinh nghiệm**: 0.0 năm ",
+      "full_response": "### 📋 CHẾ ĐỘ ĐỊNH HƯỚNG KHỞI ĐẦU CHO SINH VIÊN / FRESHER\n\n**Họ và tên**: NGUYEN HAI NAM  \n**Vị trí chuyên môn**: Quant Researcher & Data Engineer *(Mã O\\*NET: 15-1221 — Computer and Information Research Scientists)*  \n**Số năm kinh nghiệm**: 0.0 năm  \n**Kỹ năng nhận diện**: C++, Docker, GIT, LLM, Linux, Mongodb, Numpy, Pandas  \n**Học vấn**: Hanoi University of Science and Technology | Hanoi, Vietnam, Bachelor of Computer Science (Expected Graduation: June 2027)\n\n---\n\n### ⚠️ NGUY CƠ TỰ ĐỘNG HÓA AI: 17.0% *(Mức độ: Low)*\n**📌 Giải trình định lượng từ Cơ sở dữ liệu O\\*NET:**\n- **Tự động hóa tác vụ lặp lại (`sub_task_automation`)**: **20.0%** *(Các tác vụ viết boilerplate code, query CRUD, convert dữ liệu, viết unit test cú pháp có nguy cơ tự động hóa cao)*.\n- **Độ hoàn thiện của công cụ AI hiện hành (`sub_tool_maturity`)**: **54.0%** *(Mức độ hoàn thiện cao của LLM sinh code, Copilot, framework agent)*.\n- **Phơi nhiễm trước Agent tự hành (`sub_agentic_exposure`)**: **32.0%** *(Khả năng AI Agent tự động lên kế hoạch giải quyết issue từ đầu đến cuối)*.\n- **🛡️ Kỹ năng phòng thủ cốt lõi**: Agentic Experiment Pipelines & Self-Driving Research Loops, Frontier Model Evaluation & Interpretability, Technical Writing for Research Publication *(Khó bị AI thay thế nhờ tính trực giác, phản biện và kiến trúc tổng thể)*.\n\n---\n\n### 🔄 TOP 2-3 HƯỚNG CHUYỂN DỊCH NGHỀ NGHIỆP AN TOÀN (SAFE PIVOTS)\n\n#### Lựa chọn 1: Computer and Information Systems Managers *(Mã SOC: 11-3021)*\n- **Độ tương đồng kỹ năng**: **86.8%** (Tận dụng nền tảng: Kiến thức cốt lõi)\n- **Mức độ giảm rủi ro AI**: Giảm **3.0%** *(Rủi ro mới chỉ còn 14.0%)*\n- **Công cụ cần bổ sung**: Kiến trúc chuyên sâu\n- **Mức lương thị trường**: Trung bình **$164,824 USD/năm**\n\n#### Lựa chọn 2: Computer, Automated Teller, and Office Machine Repairers *(Mã SOC: 49-2011)*\n- **Độ tương đồng kỹ năng**: **77.2%** (Tận dụng nền tảng: Kiến thức cốt lõi)\n- **Mức độ giảm rủi ro AI**: Giảm **4.0%** *(Rủi ro mới chỉ còn 13.0%)*\n- **Công cụ cần bổ sung**: Kiến trúc chuyên sâu\n- **Mức lương thị trường**: Trung bình **$48,667 USD/năm**\n\n\n---\n\n### 🛡️ MA TRẬN ĐỐI SÁCH KỸ NĂNG (SKILL COUNTERMEASURES)\n1. **Thế mạnh chuyển giao**: Nền tảng chuyên môn vững chắc, tư duy thuật toán và thành thạo C++, Docker, GIT, LLM.\n2. **Khoảng cách kỹ năng cần bù đắp**: Bổ sung chuyên sâu về  và kiến trúc hệ thống phân tán.\n3. **Chiến lược đối sách**: Tận dụng kinh nghiệm hiện tại để tiếp cận công cụ mới qua dự án thực hành Capstone thay vì học lại lý thuyết cơ bản.\n\n**💵 Phân tích Rủi ro Chi phí & Thời gian chuyển dịch:**\n- **Thời gian đầu tư ước tính**: **105 giờ học thực hành** *(khoảng 1.8 tháng)*.\n- **Chi phí đầu tư dự kiến**: **$150 - $300 USD (Chứng chỉ Chuyên nghiệp Quốc tế)**.\n\n---\n\n### 📅 LỘ TRÌNH HÀNH ĐỘNG 30 - 60 - 90 NGÀY\n1. **Ngày 1 - 30 (Nền tảng)**: Tập trung bổ sung các công cụ còn thiếu (Cloud), thiết lập Git Portfolio chuẩn.\n2. **Ngày 31 - 60 (Thực chiến)**: Xây dựng dự án kết hợp chuyên môn nghiệp vụ với hạ tầng tự động hóa.\n3. **Ngày 61 - 90 (Chuyển dịch)**: Hoàn thiện hồ sơ năng lực, ôn luyện chứng chỉ và bắt đầu kết nối tuyển dụng.\n\n*Bạn có câu hỏi nào cần tôi làm rõ thêm về giai đoạn 30 ngày hay kỹ năng phòng thủ không?*\n\n---\n⏱️ **Thời gian phản hồi:** 551.8ms | 🧭 **Luồng xử lý:** WORKFLOW (Phân tích CV Chuyên sâu & Đối sách Kỹ năng)"
+    },
+    {
+      "id": "Q6",
+      "name": "Post-CV Explainability Deep-dive",
+      "type": "chat",
+      "message": "Tại sao điểm nguy cơ tự động hóa của tôi lại là 17%? Tác vụ nào có nguy cơ bị thay thế cao nhất?",
+      "status": "PASS",
+      "error": null,
+      "metrics": {
+        "ttft_ms": 10894.3,
+        "total_latency_ms": 68432.7,
+        "reported_latency_ms": 66349.1,
+        "reported_tier": "KNOWLEDGE_RAG",
+        "char_count": 1230,
+        "token_count": 269,
+        "throughput_tokens_sec": 3.9
+      },
+      "pattern_checks": {
+        "mentions_threat_or_onet": true,
+        "has_badge": true
+      },
+      "response_preview": "Theo cơ sở dữ liệu O*NET, điểm nguy cơ tự động hóa của bạn là **17%** dựa trên phân tích các yếu tố sau:  ### Lý do điểm nguy cơ tự động hóa thấp (17%): - **Kỹ năng phức tạp**: Công việc của bạn đòi hỏi kỹ năng phân tích, sáng tạo hoặc tương tác xã h",
+      "full_response": "Theo cơ sở dữ liệu O*NET, điểm nguy cơ tự động hóa của bạn là **17%** dựa trên phân tích các yếu tố sau:\n\n### Lý do điểm nguy cơ tự động hóa thấp (17%):\n- **Kỹ năng phức tạp**: Công việc của bạn đòi hỏi kỹ năng phân tích, sáng tạo hoặc tương tác xã hội cao, những yếu tố mà AI và tự động hóa khó thay thế.\n- **Tính linh hoạt**: Các tác vụ bạn thực hiện có tính linh hoạt và đa dạng, không tuân theo quy trình cứng nhắc.\n- **Tương tác con người**: Nếu công việc của bạn liên quan đến giao tiếp, đàm phán hoặc hỗ trợ người khác, AI khó có thể thay thế hoàn toàn.\n\n### Tác vụ có nguy cơ bị thay thế cao nhất:\nDựa trên phân tích O*NET, các tác vụ sau có nguy cơ tự động hóa cao hơn trong công việc của bạn:\n- **Xử lý dữ liệu lặp lại**: Những tác vụ liên quan đến nhập liệu, phân loại hoặc xử lý thông tin theo quy trình cứng nhắc.\n- **Công việc thủ công đơn giản**: Các hoạt động không đòi hỏi kỹ năng cao hoặc sáng tạo.\n\n👉 **Lời khuyên**: Để giảm thiểu nguy cơ tự động hóa, hãy tập trung phát triển các kỹ năng như sáng tạo, tư duy phản biện và kỹ năng giao tiếp. Bạn cũng có thể nhấn nút chiếc ghim (📎) để tải CV và nhận lộ trình cá nhân hóa chi tiết hơn!\n\n---\n⏱️ **Thời gian phản hồi:** 66349.1ms | 🧭 **Luồng xử lý:** KNOWLEDGE_RAG"
+    },
+    {
+      "id": "Q7",
+      "name": "Safe Pivot Trade-off Comparison",
+      "type": "chat",
+      "message": "So sánh giữa hướng làm Data Engineer và Quant Analyst, tôi nên chọn cái nào và đánh đổi những gì?",
+      "status": "PASS",
+      "error": null,
+      "metrics": {
+        "ttft_ms": 10137.6,
+        "total_latency_ms": 34353.9,
+        "reported_latency_ms": 32329.9,
+        "reported_tier": "KNOWLEDGE_RAG",
+        "char_count": 2667,
+        "token_count": 487,
+        "throughput_tokens_sec": 14.2
+      },
+      "pattern_checks": {
+        "mentions_roles": true,
+        "trade_off_analysis": true,
+        "has_badge": true
+      },
+      "response_preview": "Dựa trên tiêu chuẩn O*NET 2024 và phân tích thị trường lao động, đây là so sánh chi tiết giữa Data Engineer và Quantitative Analyst (Quant Analyst) để bạn đưa ra quyết định phù hợp:  ### **1. Bản chất công việc** - **Data Engineer (Kỹ sư dữ liệu)**: ",
+      "full_response": "Dựa trên tiêu chuẩn O*NET 2024 và phân tích thị trường lao động, đây là so sánh chi tiết giữa Data Engineer và Quantitative Analyst (Quant Analyst) để bạn đưa ra quyết định phù hợp:\n\n### **1. Bản chất công việc**\n- **Data Engineer (Kỹ sư dữ liệu)**:\n  - Xây dựng hệ thống pipeline dữ liệu, ETL/ELT\n  - Thiết kế kho dữ liệu (Data Warehouse/Lake)\n  - Tối ưu hóa cơ sở dữ liệu (SQL/NoSQL)\n  - Làm việc với Big Data (Hadoop, Spark)\n  - *O*NET mã 15-2051.00 - Data Scientists*\n\n- **Quant Analyst (Phân tích định lượng)**:\n  - Phát triển mô hình toán học cho tài chính\n  - Phân tích rủi ro và định giá tài sản\n  - Lập trình mô phỏng (Monte Carlo)\n  - Làm việc với dữ liệu thị trường tài chính\n  - *O*NET mã 13-2051.00 - Financial Analysts*\n\n### **2. Yêu cầu kỹ năng (O*NET 2024)**\n| Tiêu chí          | Data Engineer               | Quant Analyst               |\n|--------------------|-----------------------------|-----------------------------|\n| **Kỹ năng cứng**  | SQL, Python, Cloud (AWS/GCP), Distributed Systems | Toán cao cấp, Statistics, C++, Python, Stochastic Calculus |\n| **Kỹ năng mềm**   | Giải quyết vấn đề phức tạp (4.8/5), Làm việc nhóm (4.5/5) | Phân tích logic (4.9/5), Ra quyết định (4.7/5) |\n| **Trình độ**      | 72% yêu cầu Bachelor trở lên | 89% yêu cầu Master/PhD      |\n\n### **3. Đánh đổi cần cân nhắc**\n- **Thời gian đào tạo**:\n  - Quant Analyst cần đầu tư nhiều hơn (thường yêu cầu bằng cao học chuyên ngành Toán/FinMath)\n  - Data Engineer có thể bắt đầu với Bootcamp/certificate\n\n- **Môi trường làm việc**:\n  - Data Engineer: Linh hoạt (remote dễ dàng hơn), đa ngành\n  - Quant Analyst: Tập trung ở ngân hàng/quỹ đầu tư, áp lực cao\n\n- **Lương trung bình (BLS 2023)**:\n  - Data Engineer: $125k - $160k\n  - Quant Analyst: $150k - $250k+ (bonus lớn nhưng biến động)\n\n### **4. Gợi ý lựa chọn**\nChọn **Data Engineer** nếu:\n- Thích xây dựng hệ thống hơn phân tích lý thuyết\n- Muốn lộ trình rõ ràng với certification (VD: Google Data Engineer)\n- Ưa thích môi trường công nghệ đa dạng\n\nChọn **Quant Analyst** nếu:\n- Có nền tảng toán mạnh và hứng thú với tài chính\n- Sẵn sàng chịu áp lực để có thu nhập cao\n- Muốn làm việc tại Wall Street/tập đoàn tài chính lớn\n\n### **Lời khuyên bổ sung**\nĐể quyết định chính xác hơn, bạn có thể:\n1. Thử nghiệm 2 lĩnh vực qua project nhỏ:\n   - Data Engineer: Xây pipeline đơn giản với Python + Airflow\n   - Quant Analyst: Backtest chiến lược giao dịch đơn giản\n\n2. Dùng công cụ O*NET Interest Profiler (mã 15-2051 vs 13-2051) để kiểm tra thiên hướng\n\n📌 *Bạn có thể upload CV để nhận phân tích chi tiết hơn về điểm mạnh phù hợp với từng vai trò*\n\n---\n⏱️ **Thời gian phản hồi:** 32329.9ms | 🧭 **Luồng xử lý:** KNOWLEDGE_RAG"
+    },
+    {
+      "id": "Q8",
+      "name": "Skill Gap & Countermeasures",
+      "type": "chat",
+      "message": "Tôi còn thiếu công cụ gì và làm thế nào để tận dụng C++/Python hiện tại bù đắp nhanh nhất?",
+      "status": "PASS",
+      "error": null,
+      "metrics": {
+        "ttft_ms": 6096.9,
+        "total_latency_ms": 39858.3,
+        "reported_latency_ms": 37826.8,
+        "reported_tier": "KNOWLEDGE_RAG",
+        "char_count": 1814,
+        "token_count": 378,
+        "throughput_tokens_sec": 9.5
+      },
+      "pattern_checks": {
+        "mentions_skills": true,
+        "has_badge": true
+      },
+      "response_preview": "Theo tiêu chuẩn O*NET 2024, để tối ưu hóa kỹ năng lập trình của bạn với C++ và Python, bạn có thể tập trung vào các công cụ và phương pháp sau:  ### Công cụ bạn có thể cần bổ sung: - **Hệ thống quản lý phiên bản (Version Control Systems)**: Git là cô",
+      "full_response": "Theo tiêu chuẩn O*NET 2024, để tối ưu hóa kỹ năng lập trình của bạn với C++ và Python, bạn có thể tập trung vào các công cụ và phương pháp sau:\n\n### Công cụ bạn có thể cần bổ sung:\n- **Hệ thống quản lý phiên bản (Version Control Systems)**: Git là công cụ không thể thiếu để quản lý mã nguồn và hợp tác nhóm.\n- **Công cụ phát triển tích hợp (IDEs)**: Visual Studio Code, PyCharm, hoặc CLion để tăng hiệu suất viết mã.\n- **Thư viện và framework**: \n  - Python: NumPy, Pandas, TensorFlow/PyTorch cho phân tích dữ liệu và AI.\n  - C++: Boost, STL để tối ưu hóa hiệu suất và mã nguồn.\n- **Công cụ kiểm thử (Testing Tools)**: pytest (Python) và Google Test (C++) để đảm bảo chất lượng mã.\n\n### Cách tận dụng C++ và Python hiện tại:\n1. **Tích hợp C++ và Python**:\n   - Sử dụng **Pybind11** hoặc **Boost.Python** để gọi mã C++ từ Python, tận dụng tốc độ của C++ và tính linh hoạt của Python.\n2. **Tối ưu hóa hiệu suất**:\n   - Sử dụng C++ cho các tác vụ tính toán nặng và Python cho xử lý dữ liệu và giao diện người dùng.\n3. **Học các kỹ năng bổ sung**:\n   - **Đa luồng và đa xử lý**: Sử dụng OpenMP (C++) và multiprocessing (Python) để tăng tốc độ xử lý.\n   - **Lập trình hướng đối tượng (OOP)**: Áp dụng nguyên tắc OOP trong cả C++ và Python để viết mã dễ bảo trì và mở rộng.\n4. **Tham gia dự án thực tế**:\n   - Đóng góp vào các dự án mã nguồn mở trên GitHub để tích lũy kinh nghiệm và học hỏi từ cộng đồng.\n\n### Lộ trình cá nhân hóa:\nNếu bạn muốn nhận lộ trình chi tiết hơn, hãy nhấn nút chiếc ghim (📎) để tải lên CV của bạn. Tôi sẽ phân tích và đề xuất các bước cụ thể dựa trên nền tảng hiện tại của bạn.\n\nHãy bắt đầu từ những công cụ và phương pháp trên để nhanh chóng bù đắp các kỹ năng còn thiếu và tối ưu hóa việc sử dụng C++ và Python! 🚀\n\n---\n⏱️ **Thời gian phản hồi:** 37826.8ms | 🧭 **Luồng xử lý:** KNOWLEDGE_RAG"
+    },
+    {
+      "id": "Q9",
+      "name": "Detailed 30-day Phase 1 Action Plan",
+      "type": "chat",
+      "message": "Trong 30 ngày đầu tôi cần làm dự án gì cụ thể và lấy chứng chỉ nào?",
+      "status": "PASS",
+      "error": null,
+      "metrics": {
+        "ttft_ms": 11711.4,
+        "total_latency_ms": 28876.8,
+        "reported_latency_ms": 26839.4,
+        "reported_tier": "KNOWLEDGE_RAG",
+        "char_count": 1478,
+        "token_count": 259,
+        "throughput_tokens_sec": 9.0
+      },
+      "pattern_checks": {
+        "actionable_phase1": true,
+        "has_badge": true
+      },
+      "response_preview": "Dựa trên tiêu chuẩn O*NET 2024 và xu hướng thị trường lao động phòng thủ AI, đây là lộ trình 30 ngày tối ưu cho bạn:  ### **Dự án cụ thể nên làm (ưu tiên theo độ khó tăng dần)** 1. **Dự án phân tích dữ liệu cơ bản (7 ngày)**      - Thu thập dataset t",
+      "full_response": "Dựa trên tiêu chuẩn O*NET 2024 và xu hướng thị trường lao động phòng thủ AI, đây là lộ trình 30 ngày tối ưu cho bạn:\n\n### **Dự án cụ thể nên làm (ưu tiên theo độ khó tăng dần)**\n1. **Dự án phân tích dữ liệu cơ bản (7 ngày)**  \n   - Thu thập dataset từ Kaggle (ví dụ: COVID-19, GDP các nước)  \n   - Làm sạch dữ liệu bằng Python/Pandas  \n   - Visualize bằng Matplotlib/Seaborn  \n   - *Kỹ năng O*NET liên quan:* Data Visualization (4.A.2.a.4), Programming (4.A.2.b.2)  \n\n2. **Dự án web scraping (5 ngày)**  \n   - Dùng BeautifulSoup/Scrapy trích xuất dữ liệu từ trang tin tức  \n   - Lưu vào CSV/SQLite  \n   - *Kỹ năng O*NET:* Information Retrieval (4.A.2.a.7)  \n\n3. **Dự án AI/ML mini (10 ngày)**  \n   - Train mô hình phân loại ảnh đơn giản (TensorFlow/PyTorch)  \n   - Triển khai demo trên Gradio/Streamlit  \n   - *Kỹ năng O*NET:* Machine Learning (4.A.4.b.6)  \n\n### **Chứng chỉ nên lấy (theo độ phổ biến O*NET)**\n- **Google Data Analytics Certificate** (Coursera): 15-20 ngày học part-time  \n- **Microsoft Certified: Azure AI Fundamentals** (3-5 ngày ôn tập)  \n- **AWS Certified Cloud Practitioner** (7-10 ngày nếu có nền tảng IT)  \n\n### **Lưu ý cá nhân hóa**  \nĐể nhận lộ trình chính xác hơn, bạn có thể nhấn nút 📎 tải lên CV hoặc mô tả ngắn về:  \n- Ngành nghề hiện tại  \n- Kỹ năng hiện có  \n- Mục tiêu dài hạn  \n\n*(Nguồn: O*NET 2024 - Các chỉ số kỹ năng được đánh giá theo thang đo 4.A.2.a và 4.A.4.b)*\n\n---\n⏱️ **Thời gian phản hồi:** 26839.4ms | 🧭 **Luồng xử lý:** KNOWLEDGE_RAG"
+    },
+    {
+      "id": "Q10",
+      "name": "Strategic Boundary & Academic Decision",
+      "type": "chat",
+      "message": "Học thạc sĩ Khoa học Dữ liệu có giúp giảm nguy cơ bị AI thay thế hơn so với đi làm ngay không?",
+      "status": "PASS",
+      "error": null,
+      "metrics": {
+        "ttft_ms": 6873.4,
+        "total_latency_ms": 34949.9,
+        "reported_latency_ms": 32911.1,
+        "reported_tier": "KNOWLEDGE_RAG",
+        "char_count": 1478,
+        "token_count": 323,
+        "throughput_tokens_sec": 9.2
+      },
+      "pattern_checks": {
+        "balanced_strategy": true,
+        "has_badge": true
+      },
+      "response_preview": "Theo phân tích từ cơ sở dữ liệu O*NET 2024 về thị trường lao động và kỹ năng phòng thủ AI, việc học thạc sĩ Khoa học Dữ liệu có thể giúp giảm nguy cơ bị AI thay thế hơn so với đi làm ngay. Dưới đây là các lý do cụ thể:  - **Nâng cao kỹ năng chuyên mô",
+      "full_response": "Theo phân tích từ cơ sở dữ liệu O*NET 2024 về thị trường lao động và kỹ năng phòng thủ AI, việc học thạc sĩ Khoa học Dữ liệu có thể giúp giảm nguy cơ bị AI thay thế hơn so với đi làm ngay. Dưới đây là các lý do cụ thể:\n\n- **Nâng cao kỹ năng chuyên môn**: Thạc sĩ Khoa học Dữ liệu trang bị kiến thức sâu về phân tích dữ liệu, học máy và trí tuệ nhân tạo, giúp bạn trở thành chuyên gia trong lĩnh vực này. Những kỹ năng này được đánh giá cao và khó bị AI thay thế.\n  \n- **Phát triển tư duy phản biện và sáng tạo**: Chương trình thạc sĩ thường tập trung vào việc phát triển tư duy phản biện và sáng tạo, những yếu tố quan trọng để giải quyết các vấn đề phức tạp mà AI chưa thể đảm nhận.\n\n- **Cơ hội nghiên cứu và ứng dụng thực tế**: Việc tham gia các dự án nghiên cứu và ứng dụng thực tế trong quá trình học thạc sĩ giúp bạn tích lũy kinh nghiệm quý báu, làm tăng giá trị của bạn trên thị trường lao động.\n\n- **Mạng lưới quan hệ chuyên nghiệp**: Học thạc sĩ cũng giúp bạn xây dựng mạng lưới quan hệ với các chuyên gia và đồng nghiệp trong ngành, mở ra nhiều cơ hội nghề nghiệp và hợp tác.\n\nTuy nhiên, việc đi làm ngay cũng có những lợi ích riêng, như tích lũy kinh nghiệm thực tế và thu nhập sớm. Quyết định cuối cùng phụ thuộc vào mục tiêu cá nhân và hoàn cảnh của bạn.\n\nNếu bạn muốn nhận lộ trình cá nhân hóa phù hợp với trình độ và mục tiêu của mình, hãy nhấn nút chiếc ghim (📎) để tải CV của bạn lên.\n\n---\n⏱️ **Thời gian phản hồi:** 32911.1ms | 🧭 **Luồng xử lý:** KNOWLEDGE_RAG"
+    }
+  ]
+}

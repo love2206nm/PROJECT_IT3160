@@ -1,0 +1,37 @@
+# ==============================================================================
+# Google Cloud Build & Cloud Run CI/CD Pipeline
+# Automatically builds Docker image and deploys to Cloud Run with 2GB RAM
+# ==============================================================================
+
+steps:
+  # 1. Build Docker image
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'gcr.io/$PROJECT_ID/ai-career-copilot:$COMMIT_SHA', '.']
+
+  # 2. Push image to Google Container Registry
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'gcr.io/$PROJECT_ID/ai-career-copilot:$COMMIT_SHA']
+
+  # 3. Deploy container to Cloud Run in Singapore region (asia-southeast1)
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: gcloud
+    args:
+      - 'run'
+      - 'deploy'
+      - 'ai-career-copilot'
+      - '--image'
+      - 'gcr.io/$PROJECT_ID/ai-career-copilot:$COMMIT_SHA'
+      - '--region'
+      - 'asia-southeast1'
+      - '--platform'
+      - 'managed'
+      - '--allow-unauthenticated'
+      - '--memory'
+      - '2Gi'
+      - '--cpu'
+      - '1'
+      - '--port'
+      - '8080'
+
+images:
+  - 'gcr.io/$PROJECT_ID/ai-career-copilot:$COMMIT_SHA'

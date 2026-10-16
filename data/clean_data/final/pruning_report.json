@@ -1,0 +1,388 @@
+{
+  "initial_feature_count": 120,
+  "pruned_feature_count": 76,
+  "reduction_percentage": 36.67,
+  "correlation_threshold": 0.85,
+  "cross_group_threshold": 0.95,
+  "feature_counts_by_group": {
+    "skills": {
+      "original": 10,
+      "kept": 3,
+      "dropped": 7
+    },
+    "knowledge": {
+      "original": 33,
+      "kept": 32,
+      "dropped": 1
+    },
+    "abilities": {
+      "original": 52,
+      "kept": 17,
+      "dropped": 35
+    },
+    "software": {
+      "original": 20,
+      "kept": 20,
+      "dropped": 0
+    },
+    "economic_complexity": {
+      "original": 5,
+      "kept": 4,
+      "dropped": 1
+    }
+  },
+  "dropped_details": [
+    {
+      "group": "skills",
+      "type": "intra_group",
+      "dropped": "skill_active_learning",
+      "kept": "skill_active_listening",
+      "correlation": 0.903,
+      "reason": "Intra-group multicollinearity (|r| = 0.903 >= 0.85)"
+    },
+    {
+      "group": "skills",
+      "type": "intra_group",
+      "dropped": "skill_critical_thinking",
+      "kept": "skill_active_listening",
+      "correlation": 0.939,
+      "reason": "Intra-group multicollinearity (|r| = 0.939 >= 0.85)"
+    },
+    {
+      "group": "skills",
+      "type": "intra_group",
+      "dropped": "skill_monitoring",
+      "kept": "skill_active_listening",
+      "correlation": 0.8655,
+      "reason": "Intra-group multicollinearity (|r| = 0.865 >= 0.85)"
+    },
+    {
+      "group": "skills",
+      "type": "intra_group",
+      "dropped": "skill_active_listening",
+      "kept": "skill_reading_comprehension",
+      "correlation": 0.9408,
+      "reason": "Intra-group multicollinearity (|r| = 0.941 >= 0.85)"
+    },
+    {
+      "group": "skills",
+      "type": "intra_group",
+      "dropped": "skill_learning_strategies",
+      "kept": "skill_speaking",
+      "correlation": 0.8622,
+      "reason": "Intra-group multicollinearity (|r| = 0.862 >= 0.85)"
+    },
+    {
+      "group": "skills",
+      "type": "intra_group",
+      "dropped": "skill_speaking",
+      "kept": "skill_reading_comprehension",
+      "correlation": 0.941,
+      "reason": "Intra-group multicollinearity (|r| = 0.941 >= 0.85)"
+    },
+    {
+      "group": "skills",
+      "type": "intra_group",
+      "dropped": "skill_writing",
+      "kept": "skill_reading_comprehension",
+      "correlation": 0.9646,
+      "reason": "Intra-group multicollinearity (|r| = 0.965 >= 0.85)"
+    },
+    {
+      "group": "knowledge",
+      "type": "intra_group",
+      "dropped": "knowledge_therapy_and_counseling",
+      "kept": "knowledge_psychology",
+      "correlation": 0.9035,
+      "reason": "Intra-group multicollinearity (|r| = 0.904 >= 0.85)"
+    },
+    {
+      "group": "abilities",
+      "type": "intra_group",
+      "dropped": "ability_arm_hand_steadiness",
+      "kept": "ability_control_precision",
+      "correlation": 0.9083,
+      "reason": "Intra-group multicollinearity (|r| = 0.908 >= 0.85)"
+    },
+    {
+      "group": "abilities",
+      "type": "intra_group",
+      "dropped": "ability_hearing_sensitivity",
+      "kept": "ability_auditory_attention",
+      "correlation": 0.8908,
+      "reason": "Intra-group multicollinearity (|r| = 0.891 >= 0.85)"
+    },
+    {
+      "group": "abilities",
+      "type": "intra_group",
+      "dropped": "ability_category_flexibility",
+      "kept": "ability_deductive_reasoning",
+      "correlation": 0.8995,
+      "reason": "Intra-group multicollinearity (|r| = 0.900 >= 0.85)"
+    },
+    {
+      "group": "abilities",
+      "type": "intra_group",
+      "dropped": "ability_depth_perception",
+      "kept": "ability_control_precision",
+      "correlation": 0.8683,
+      "reason": "Intra-group multicollinearity (|r| = 0.868 >= 0.85)"
+    },
+    {
+      "group": "abilities",
+      "type": "intra_group",
+      "dropped": "ability_finger_dexterity",
+      "kept": "ability_control_precision",
+      "correlation": 0.8686,
+      "reason": "Intra-group multicollinearity (|r| = 0.869 >= 0.85)"
+    },
+    {
+      "group": "abilities",
+      "type": "intra_group",
+      "dropped": "ability_manual_dexterity",
+      "kept": "ability_control_precision",
+      "correlation": 0.9194,
+      "reason": "Intra-group multicollinearity (|r| = 0.919 >= 0.85)"
+    },
+    {
+      "group": "abilities",
+      "type": "intra_group",
+      "dropped": "ability_multilimb_coordination",
+      "kept": "ability_control_precision",
+      "correlation": 0.9032,
+      "reason": "Intra-group multicollinearity (|r| = 0.903 >= 0.85)"
+    },
+    {
+      "group": "abilities",
+      "type": "intra_group",
+      "dropped": "ability_rate_control",
+      "kept": "ability_control_precision",
+      "correlation": 0.8672,
+      "reason": "Intra-group multicollinearity (|r| = 0.867 >= 0.85)"
+    },
+    {
+      "group": "abilities",
+      "type": "intra_group",
+      "dropped": "ability_reaction_time",
+      "kept": "ability_control_precision",
+      "correlation": 0.8764,
+      "reason": "Intra-group multicollinearity (|r| = 0.876 >= 0.85)"
+    },
+    {
+      "group": "abilities",
+      "type": "intra_group",
+      "dropped": "ability_fluency_of_ideas",
+      "kept": "ability_deductive_reasoning",
+      "correlation": 0.8785,
+      "reason": "Intra-group multicollinearity (|r| = 0.878 >= 0.85)"
+    },
+    {
+      "group": "abilities",
+      "type": "intra_group",
+      "dropped": "ability_deductive_reasoning",
+      "kept": "ability_inductive_reasoning",
+      "correlation": 0.974,
+      "reason": "Intra-group multicollinearity (|r| = 0.974 >= 0.85)"
+    },
+    {
+      "group": "abilities",
+      "type": "intra_group",
+      "dropped": "ability_dynamic_strength",
+      "kept": "ability_extent_flexibility",
+      "correlation": 0.9147,
+      "reason": "Intra-group multicollinearity (|r| = 0.915 >= 0.85)"
+    },
+    {
+      "group": "abilities",
+      "type": "intra_group",
+      "dropped": "ability_gross_body_coordination",
+      "kept": "ability_extent_flexibility",
+      "correlation": 0.9036,
+      "reason": "Intra-group multicollinearity (|r| = 0.904 >= 0.85)"
+    },
+    {
+      "group": "abilities",
+      "type": "intra_group",
+      "dropped": "ability_gross_body_equilibrium",
+      "kept": "ability_extent_flexibility",
+      "correlation": 0.8799,
+      "reason": "Intra-group multicollinearity (|r| = 0.880 >= 0.85)"
+    },
+    {
+      "group": "abilities",
+      "type": "intra_group",
+      "dropped": "ability_stamina",
+      "kept": "ability_extent_flexibility",
+      "correlation": 0.9099,
+      "reason": "Intra-group multicollinearity (|r| = 0.910 >= 0.85)"
+    },
+    {
+      "group": "abilities",
+      "type": "intra_group",
+      "dropped": "ability_static_strength",
+      "kept": "ability_extent_flexibility",
+      "correlation": 0.9185,
+      "reason": "Intra-group multicollinearity (|r| = 0.919 >= 0.85)"
+    },
+    {
+      "group": "abilities",
+      "type": "intra_group",
+      "dropped": "ability_trunk_strength",
+      "kept": "ability_extent_flexibility",
+      "correlation": 0.9202,
+      "reason": "Intra-group multicollinearity (|r| = 0.920 >= 0.85)"
+    },
+    {
+      "group": "abilities",
+      "type": "intra_group",
+      "dropped": "ability_flexibility_of_closure",
+      "kept": "ability_information_ordering",
+      "correlation": 0.8526,
+      "reason": "Intra-group multicollinearity (|r| = 0.853 >= 0.85)"
+    },
+    {
+      "group": "abilities",
+      "type": "intra_group",
+      "dropped": "ability_night_vision",
+      "kept": "ability_glare_sensitivity",
+      "correlation": 0.9106,
+      "reason": "Intra-group multicollinearity (|r| = 0.911 >= 0.85)"
+    },
+    {
+      "group": "abilities",
+      "type": "intra_group",
+      "dropped": "ability_peripheral_vision",
+      "kept": "ability_glare_sensitivity",
+      "correlation": 0.9166,
+      "reason": "Intra-group multicollinearity (|r| = 0.917 >= 0.85)"
+    },
+    {
+      "group": "abilities",
+      "type": "intra_group",
+      "dropped": "ability_sound_localization",
+      "kept": "ability_glare_sensitivity",
+      "correlation": 0.8746,
+      "reason": "Intra-group multicollinearity (|r| = 0.875 >= 0.85)"
+    },
+    {
+      "group": "abilities",
+      "type": "intra_group",
+      "dropped": "ability_glare_sensitivity",
+      "kept": "ability_spatial_orientation",
+      "correlation": 0.8978,
+      "reason": "Intra-group multicollinearity (|r| = 0.898 >= 0.85)"
+    },
+    {
+      "group": "abilities",
+      "type": "intra_group",
+      "dropped": "ability_information_ordering",
+      "kept": "ability_inductive_reasoning",
+      "correlation": 0.9003,
+      "reason": "Intra-group multicollinearity (|r| = 0.900 >= 0.85)"
+    },
+    {
+      "group": "abilities",
+      "type": "intra_group",
+      "dropped": "ability_inductive_reasoning",
+      "kept": "ability_oral_comprehension",
+      "correlation": 0.9158,
+      "reason": "Intra-group multicollinearity (|r| = 0.916 >= 0.85)"
+    },
+    {
+      "group": "abilities",
+      "type": "intra_group",
+      "dropped": "ability_number_facility",
+      "kept": "ability_mathematical_reasoning",
+      "correlation": 0.9676,
+      "reason": "Intra-group multicollinearity (|r| = 0.968 >= 0.85)"
+    },
+    {
+      "group": "abilities",
+      "type": "intra_group",
+      "dropped": "ability_memorization",
+      "kept": "ability_oral_comprehension",
+      "correlation": 0.8548,
+      "reason": "Intra-group multicollinearity (|r| = 0.855 >= 0.85)"
+    },
+    {
+      "group": "abilities",
+      "type": "intra_group",
+      "dropped": "ability_oral_comprehension",
+      "kept": "ability_oral_expression",
+      "correlation": 0.975,
+      "reason": "Intra-group multicollinearity (|r| = 0.975 >= 0.85)"
+    },
+    {
+      "group": "abilities",
+      "type": "intra_group",
+      "dropped": "ability_speech_clarity",
+      "kept": "ability_oral_expression",
+      "correlation": 0.9442,
+      "reason": "Intra-group multicollinearity (|r| = 0.944 >= 0.85)"
+    },
+    {
+      "group": "abilities",
+      "type": "intra_group",
+      "dropped": "ability_speech_recognition",
+      "kept": "ability_oral_expression",
+      "correlation": 0.9096,
+      "reason": "Intra-group multicollinearity (|r| = 0.910 >= 0.85)"
+    },
+    {
+      "group": "abilities",
+      "type": "intra_group",
+      "dropped": "ability_oral_expression",
+      "kept": "ability_written_comprehension",
+      "correlation": 0.9419,
+      "reason": "Intra-group multicollinearity (|r| = 0.942 >= 0.85)"
+    },
+    {
+      "group": "abilities",
+      "type": "intra_group",
+      "dropped": "ability_selective_attention",
+      "kept": "ability_perceptual_speed",
+      "correlation": 0.8603,
+      "reason": "Intra-group multicollinearity (|r| = 0.860 >= 0.85)"
+    },
+    {
+      "group": "abilities",
+      "type": "intra_group",
+      "dropped": "ability_speed_of_closure",
+      "kept": "ability_problem_sensitivity",
+      "correlation": 0.8569,
+      "reason": "Intra-group multicollinearity (|r| = 0.857 >= 0.85)"
+    },
+    {
+      "group": "abilities",
+      "type": "intra_group",
+      "dropped": "ability_written_expression",
+      "kept": "ability_written_comprehension",
+      "correlation": 0.9702,
+      "reason": "Intra-group multicollinearity (|r| = 0.970 >= 0.85)"
+    },
+    {
+      "group": "cross_group",
+      "type": "cross_group_tie_break",
+      "dropped": "ability_mathematical_reasoning",
+      "kept": "skill_mathematics",
+      "correlation": 0.9748,
+      "reason": "Cross-group duplication (|r| = 0.975 >= 0.95)"
+    },
+    {
+      "group": "cross_group",
+      "type": "cross_group_tie_break",
+      "dropped": "ability_written_comprehension",
+      "kept": "skill_reading_comprehension",
+      "correlation": 0.9858,
+      "reason": "Cross-group duplication (|r| = 0.986 >= 0.95)"
+    },
+    {
+      "group": "cross_group",
+      "type": "cross_group_tie_break",
+      "dropped": "complexity_people_level",
+      "kept": "skill_reading_comprehension",
+      "correlation": 0.9506,
+      "reason": "Cross-group duplication (|r| = 0.951 >= 0.95)"
+    }
+  ]
+}

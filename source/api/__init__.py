@@ -1,1 +1,1 @@
-"""API module for Job Advisor."""
+"""API Presentation Layer (FastAPI Controllers & Routers)."""

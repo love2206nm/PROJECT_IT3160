@@ -49,6 +49,12 @@ venv.bak/
 .DS_Store
 Thumbs.db
 
+# Frontend Dependencies & Builds
+node_modules/
+dist/
+.parcel-cache/
+.vite/
+
 # Jupyter Notebook Checkpoints
 .ipynb_checkpoints
 */.ipynb_checkpoints/*
@@ -72,7 +78,9 @@ logs/
 # Data files & Datasets (Raw, Processed, Models)
 data/*.csv
 data/raw_data/*.csv
+!data/raw_data/job_titles.csv
 data/clean_data/*
+!data/clean_data/final/
 !data/clean_data/.gitkeep
 !data/raw_data/.gitkeep
 data_cleaned_scaled/
@@ -82,3 +90,14 @@ data_cleaned_scaled/
 *.feather
 *.h5
 *.pkl
+*.joblib
+*.index
+!models/.gitkeep
+!models/faiss_index/.gitkeep
+
+# --- Production Runtime Datasets & Models Whitelist (~13.9 MB total) ---
+!data/clean_data/final/*.parquet
+!data/clean_data/final/*.json
+!data/raw_data/job_titles.csv
+!models/*.joblib
+!models/faiss_index/**

@@ -1,0 +1,57 @@
+# Git & VCS
+.git
+.gitignore
+.gitattributes
+.github
+
+# Python Cache & Virtual Environments
+__pycache__
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Testing & CI
+.pytest_cache
+.coverage
+htmlcov/
+.tox/
+tests/
+scratch/
+
+# IDE & OS Files
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Raw Data (only job_titles.csv is required for O*NET title matching)
+data/raw_data/*
+!data/raw_data/job_titles.csv
+notebooks/
+
+# Environment Secrets
+.env
+.env.local
+*.log
