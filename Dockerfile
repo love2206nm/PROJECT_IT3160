@@ -8,7 +8,7 @@ FROM python:3.11-slim
 # Set environment variables for Python & Server
 ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1 \
-    PORT=8000 \
+    PORT=7860 \
     HOST=0.0.0.0 \
     APP_ENV=production \
     DEBUG=false \
