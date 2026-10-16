@@ -43,19 +43,23 @@ def get_logger(name: str) -> logging.Logger:
 
         # 2. Rotating File Handler (10MB per file, 5 backup files)
         if settings.LOG_TO_FILE:
-            log_dir = Path(settings.LOG_DIR)
-            log_dir.mkdir(parents=True, exist_ok=True)
-            log_file = log_dir / settings.LOG_FILE
+            try:
+                log_dir = Path(settings.LOG_DIR)
+                log_dir.mkdir(parents=True, exist_ok=True)
+                log_file = log_dir / settings.LOG_FILE
 
-            file_handler = RotatingFileHandler(
-                log_file,
-                maxBytes=10 * 1024 * 1024,
-                backupCount=5,
-                encoding="utf-8",
-            )
-            file_handler.setLevel(log_level)
-            file_handler.setFormatter(formatter)
-            logger.addHandler(file_handler)
+                file_handler = RotatingFileHandler(
+                    log_file,
+                    maxBytes=10 * 1024 * 1024,
+                    backupCount=5,
+                    encoding="utf-8",
+                )
+                file_handler.setLevel(log_level)
+                file_handler.setFormatter(formatter)
+                logger.addHandler(file_handler)
+            except Exception:
+                # In restricted container environments, fallback safely to console stream
+                pass
 
         # Do not propagate to root logger to avoid duplicate log lines
         logger.propagate = False

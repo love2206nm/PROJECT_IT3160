@@ -21,7 +21,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && rm -rf /var/lib/apt/lists/*
 
 # Render and Hugging Face Spaces compatibility with UID 1000
-RUN useradd -m -u 1000 appuser
+RUN useradd -m -u 1000 appuser && \
+    mkdir -p /app/logs && \
+    chown -R appuser:appuser /app
 
 WORKDIR /app
 
@@ -32,6 +34,9 @@ RUN pip install --no-cache-dir --upgrade pip && \
 
 # Copy application source code, models, clean datasets, and static frontend
 COPY --chown=appuser:appuser . .
+
+# Ensure appuser owns everything in /app and has write permissions to logs
+RUN chown -R appuser:appuser /app && chmod -R 775 /app/logs
 
 # Switch to non-root user
 USER appuser
